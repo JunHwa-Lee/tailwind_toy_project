@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="max-w-2xl mx-auto p-8">
+        <!-- max-w-2xl은 width의 max를 최대 2xl(672px)로 지정한다는 뜻이다.  -->
+        <!-- To center a container use "mx-auto" -->
+        <!-- p-8: 전체적으로 padding +8을 하라는 뜻 -->
+      
+        <h2 class="sm:text-lg sm:leading-snug font-semibold tracking-wide uppercase text-fuchsia-600">INTRODUCING...</h2>
+        <!-- 
+          sm: -> 최소 sm 부터 다음을 적용하라는 뜻. 주의할 것은 moblie과 sm은 다르다는 것이다. 
+          leading-()는 라인 높이를 뜻한다. 1부터 위의 snug까지 있는데 별 차이는 없는 것 같다.
+          font-()는 두께를 의미한다.
+          tracking-wide 는 글자 간격을 뜻한다.
+          text-() 는 컬러를 의미
+         -->
+        <p class="text-5xl lg:text-6xl leading-none font-extrabold text-gray-900">Tailwind stories</p>
+        <!-- 
+          text-5xl => 글자 크기
+          lg:text-6xl => lg size일 때 글자 크기
+          leading-none => line height: 1;
+         -->
+      
+         <ul class="flex space-x-6">
+           <li class="flex flex-col items-center space-y-1">
+             <!-- flex-col은 flex 기능을 사용하면서 형식은 그대로 block으로 하고 싶을 때 사용한다. -->
+             <!-- items-center는 flex 상태에서 좌우로 중앙에 오게 하는 역할인 것 같다. -->
+             <!-- align-items는 column의 중앙에 오게 하는 역할인 것 같다. -->
+             <div class="relative bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+               <!-- gradient-to top, right -->
+               <!-- div로 감싼 이유는 아래의 kitty one 까지 bg가 씌워지기 때문 -->
+             <a class="block bg-white p-1 rounded-full transform transition hover:-rotate-6 " href="#">
+             <!-- a는 다른 페이지로 가게끔 가리키는 것이고 href에 그 주소나 위치를 적는다. 다만, https://를 필수로 앞에 붙여줘야 한다. -->
+             <!-- 이유는 모르겠지만 block을 설정해줘야 background가 나타난다. -->
+             <!-- transform은 오른쪽의 hover: -rotate-6를 사용할 때 도움이 된다. -->
+             <!-- transition은 일단 그냥 여기에서는 rotate가 즉각적이 아닌 점진적으로 일어나게 해준다. 한결 더 부드럽게. -->
+               <img class="h-24 w-24 rounded-full" src="https://placekitten.com/200/201" alt="cute kitty">
+               <!-- alt는 alternative 즉, 사진이 나오지 않을 경우를 대비한 대비책 -->
+             </a>
+             <button class="create-story">+</button>
+             </div>
+             <a href="#">you!</a>
+            </li>
+             <!-- href="#"의 의미는 그냥 화면 최상단으로 이동하라는 의미. -->
+            <li class="flex flex-col items-center space-y-1">
+              <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+             <a class="block bg-white p-1 rounded-full transform transition hover:-rotate-6 " href="#">
+               <img class="h-24 w-24 rounded-full" src="https://placekitten.com/200/250" alt="cute kitty">
+             </a>
+             </div>
+             <a href="#">kitty two</a>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+              <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+             <a class="block bg-white p-1 rounded-full transform transition hover:-rotate-6 " href="#">
+               <img class="h-24 w-24 rounded-full" src="https://placekitten.com/202/200" alt="cute kitty">
+             </a>
+             </div>
+             <a href="#">kitty three</a>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+              <div class="bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1 rounded-full">
+             <a class="block bg-white p-1 rounded-full transform transition hover:-rotate-6 " href="#">
+               <img class="h-24 w-24 rounded-full" src="https://placekitten.com/340/330" alt="cute kitty">
+             </a>
+             </div>
+             <a href="#">kitty four</a>
+            </li>
+         </ul>
+  </body>
+</html>

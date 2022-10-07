@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .create-story {
+    @apply absolute bottom-0 right-1 bg-blue-500 h-8 w-8 text-white text-2xl rounded-full font-semibold border-4 border-white flex justify-center items-center font-mono hover:bg-blue-700;
+  }
+}
+
+/* 이 사람 설명으로는 HTML로 이것을 보내기 위해서 위의 @layer를 쓰고 옆에 components의 의미는 위의 components를 의미한다.
+즉, 아래의 utilities가 적용되기 이전에 먼저 components에 보냄으로써 적용이 된다는 뭐, 이런 말이다. */
+/* 
+  
+ */
